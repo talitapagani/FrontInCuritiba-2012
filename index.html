@@ -1,0 +1,416 @@
+<!doctype html>  
+<html lang="en">
+	
+	<head>
+		<meta charset="utf-8">
+		
+		<title>Usabilidade em Dispositivos Móveis</title>
+
+		<meta name="description" content="An easy to use CSS 3D slideshow tool for quickly creating good looking HTML presentations.">
+		<meta name="author" content="Talita Pagani">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="css/print.css" type="text/css" media="print">
+
+		<link rel="stylesheet" href="lib/zenburn.css">
+	</head>
+	
+	<body>
+		
+		<div class="reveal">
+			
+			<div class="logo-frontin"></div>
+
+			<!-- Used to fade in a background when a specific slide state is reached -->
+			<div class="state-background"></div>
+			
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Usabilidade de Interfaces para Dispositivos Móveis</h1>
+					<h3 class="inverted">Talita Pagani</h3>
+					<p><a href="http://twitter.com/talitapagani">@talitapagani</a></p>
+				</section>
+				
+				<section>
+					<h2>Agenda</h2>
+					<ul>
+						<li>Apresentação</li>
+						<li>Pra começo de conversa</li>
+						<li>O paradigma <em>mobile</em></li>
+						<li>Melhores práticas de design e front-end</li>
+						<li>Exemplos</li>
+						<li>Use Padrões!</li>
+						<li>Amarrando as ideias</li>
+						<li>Referências</li>
+						<li>Conclusão</li>
+					</ul>
+				</section>
+				
+				<section>
+					<h2>Apresentação</h2>
+					
+					<dl>
+						<dt>MStech - Educação e Tecnologia (Bauru)</dt>
+							<dd>Qualidade e teste de software</dd>
+							<dd>P&amp;D em HTML5+JS aplicado a jogos, mobile e acessibilidade</dd>
+						<dt>Formação</dt>
+							<dd>Bacharel em Ciência da Computação (USC-Bauru)</dd>
+							<dd>Pós-graduanda em Gerenciamento de Projetos (SENAC)</dd>
+						<dt>Tableless</dt>
+							<dd>Editora (CSS, HTML[5], Usabilidade, Internet Móvel)</dd>
+						<dt>WebDesign Experience</dt>
+							<dd>Tentando mantê-lo atualizado</dd>
+					</dl>
+				</section>
+				
+				<section data-state="sectionSlide highlight2">
+					<h1>Pra começo de conversa</h1>
+				</section>
+				
+				<section data-state="sectionSlide highlight1">
+					<h2>Contexto</h2>
+					
+					<blockquote class="special">Ao longo da última década, os dispositos móveis sofreram inúmeras modificações, de celulares a smartphones, de teclado convencional a touch screen e teclados QWERTY. Esta evolução modificou a forma com que as pessoas interagem com estes dispositivos.</blockquote>
+				</section>
+				
+				<section>
+					<h2>Telefonia móvel no Brasil</h2>
+					
+					<dl>
+						<dt>Em 2008, segundo o IBGE</dt>
+							<dd>794 usuários para cada 100 mil habitantes</dd>
+							<dd>Telefonia fixa correspondia a 306 usuários para cada 100 mil</dd>
+							
+						<dt>Em 2009, segundo a pesquisa TIC Domicílios</dt>
+							<dd>35% da população que possui celular, tem acesso à internet no dispositivo</dd>
+							
+						<dt>Em 2011</dt>
+							<dd>Aproximadamente 40 milhões de usuários de celular com acesso à internet<br />
+								<small><a href="http://g1.globo.com/espirito-santo/noticia/2011/10/acesso-internet-por-celular-deve-ser-lider-no-pais-diz-especialista-no-es.html" target="_blank">Acesso à internet por celular deve ser líder no país, diz especialista, no ES</a></small>
+							</dd>
+							<dd>29,5 milhões de brasileiros com mais de 12 anos se conectam à internet por meio de dispositivos móveis<br />
+								<small><a href="http://exame.abril.com.br/tecnologia/noticias/dispositivos-moveis-alavancam-acesso-a-internet-no-brasil" target="_blank">Dispositivos móveis alavancam acesso à internet no Brasil</a></small>
+							</dd>
+					</dl>
+				</section>
+				
+				<section data-state="sectionSlide highlight2">
+					<h1>O paradigma "mobile"</h1>
+				</section>
+				
+				<section>
+					<section class="down">
+						<h2>Desktop vs. Mobile</h2>
+						
+						<ul>
+							<li><strong>Interfaces de desktop e mobile</strong></li>
+							<ul>
+								<li>Mais homogêneas entre si, se assemelhando cada vez mais</li>
+							</ul>
+							<li><strong>Interação de desktop e mobile</strong></li>
+							<ul>
+								<li>Distintas</li>
+							</ul>
+						</ul>
+						
+						<blockquote class="special">As interfaces criadas para cada dispositivo nos ajudam a <strong>distinguir os ambientes</strong> e também a forma com que o usuário interage</blockquote>
+						<p>(Eis, 2011)</p>
+					</section>
+					<section data-state="sectionSlide highlight3">
+						<img src="images/devices2.png" alt="Dispositivos de diferentes tamanhos de tela" class="image special">
+						<p class="special"><small>Fonte: <a href="http://www.smashingmagazine.com/2011/05/02/a-user-centered-approach-to-mobile-design/" target="_blank">A User Centered Approach to Mobile Design</a></small></p>
+					</section>
+				</section>
+				
+				<section>
+					<section class="down">
+						<h2>Smartphones e interfaces touch</h2>
+						
+						<ul>
+							<li>Dispositivos como os smartphones, estão em crescente substituição aos dispositivos convencionais</li>
+							<li>Popularização de smartphones com tela sensível ao toque</li>
+						</ul>
+						
+						
+					</section>
+					<section data-state="sectionSlide highlight3">
+						<blockquote class="special">Criar interfaces touch é algo relativamente novo. Nós trouxemos ideias da interação com mouse para os dispositivos touch, mas grande parte das interações precisaram ser reinventadas. [...] Lembre agora na forma de como você gira uma imagem em um dispositivo touch e como você gira essa mesma imagem utilizando um mouse. A interface muda, o seu comportamento muda.</blockquote>
+						<p>(Eis, 2011)</p>
+					</section>
+					<section data-state="sectionSlide highlight1">
+						
+							<h2 class="special">Variação de Hardware</h2>
+							<h2 class="special">Convenções de Interface e Interação</h2>
+							<h2 class="special">Ambiente</h2>
+						
+					</section>
+				</section>
+				
+				<section data-state="sectionSlide highlight2">
+					<h1>Melhores práticas de design e front-end</h1>
+				</section>
+				
+				<section>
+					<h2>Interface</h2>
+					
+					<ul>
+						<li>Navegação e menus</li>
+						<li>Ícones</li>
+						<li><strong>Tarefas a serem desempenhadas (Apple, 2011; Android, 2011)</strong></li>
+						<ul>
+							<li>Ao utilizar um dispositivo, os usuários começam a realizar tarefas uma após a outra, alheios ao comportamento subjacente</li>
+							<li>Experiência deve ser contínua, atividade após atividade, tarefa após tarefa</li>
+						</ul>
+					</ul>
+				</section>
+				
+				<section>
+					<h2>Usabilidade (Apple, 2011)</h2>
+					<ul>
+						<li>Foco em tarefas primárias</li>
+						<li>Eleve o conteúdo com o qual as pessoas se importam</li>
+						<ul>
+							<li>Liste as funcionalidades que os usuários possam gostar</li>
+							<li>Determine a audiência</li>
+						</ul>
+						<li>Dar ao usuário um caminho lógico a seguir</li>
+						<li>Utilização simples e óbvia</li>
+						<li>Terminologia “centrada no usuário”</li>
+					</ul>
+				</section>
+				
+				<section>
+					<section>
+						<h2>Experiência do Usuário</h2>
+						<ul>
+							<li>Qual a necessidade de seus usuários ao acessar o seu site através de um dispositivos móvel?</li>
+							<li>Que recursos ele utilizam?</li>
+							<li>Quais recursos são cruciais para eles quando estão acessando via mobile?</li>
+							<li>Quais as frustrações?</li>
+							<li>Quais dispositivos são utilizados para este acesso?</li>
+						</ul>
+						<p class="footnote special"><small>Fonte: <a href="http://www.smashingmagazine.com/2011/05/02/a-user-centered-approach-to-mobile-design/" target="_blank">A User Centered Approach to Mobile Design</a></small></p>
+					</section>
+					<section data-state="sectionSlide highlight1">
+						<h2>Design Responsivo ou Versão Mobile?</h2>
+						<ul>
+							<li>Reiterando: <strong>experiências diferentes</strong></li>
+							<li>Técnicas igualmente válidas, variando de acordo com o escopo do site</li>
+							<li><strong>Sites de conteúdo</strong></li>
+							<ul>
+								<li>Reduzir algumas informações</li>
+								<li>Rearranjo de layout para beneficiar diferentes dispositivos</li>
+								<li>Utilizar os padrões de interface de mobile</li>
+							</ul>
+							<li><strong>Aplicações web</strong></li>
+							<ul>
+								<li>Subconjunto de funcionalidades da aplicação desktop</li>
+								<li>Tarefas mais focadas</li>
+								<li>Corte de alguns caminhos de interação</li>
+							</ul>
+						</ul>
+					</section>
+				</section>
+				
+				<section>
+					<h2>Front-end (Eis, 2011; Pagani, 2010)</h2>
+					<section>
+						<dl>
+							<dt>Teclas de atalho para executar ações</dt>
+								<dd>Ações importantes expostas na interface</dd>
+							<dt>Controle da área de toque</dt>
+							<dt>Concisão</dt>
+								<dd>Conteúdo minimizado: ações, textos, links, imagens e controles de formulários que sejam mais relevantes</dd>
+						</dl>
+					</section>
+					<section>
+						<dl>
+							<dt>Minimizar erros em formulários</dt>
+								<dd>Labels acima do campo</dd>
+								<dd>Espaçamento adequado dos campos</dd>
+								<dd>Cuidado com a área de clique do botão submit (Envio involuntário dos dados)</dd>
+								<dd>Utilizar o input type adequado (HTML5!)</dd>
+							<dt>Minimizar input</dt>
+								<dd>Pré-seleção para valores em campos de formulário</dd>
+								<dd>Utilizar listas de seleção, radio buttons e outros controles que não requerem digitação</dd>
+						</dl>
+					</section>
+					<section data-state="sectionSlide highlight3">
+						<img src="images/inputs.png" alt="Inputs do tipo text e number no Android">
+					</section>
+					<section data-state="sectionSlide highlight3">
+            <img src="images/inputs2.png" alt="Inputs do tipo email e tel no iPhone">
+          </section>
+					
+				</section>
+				
+				<section data-state="sectionSlide highlight2">
+					<h1>Exemplos</h1>
+				</section>
+				
+				<section>
+					<section>
+						<img src="images/cross-channel-balance-extension.jpg" alt="Websites mobile de companhias aéreas">
+						<h4 class="special">Design adequado ao contexto</h4>
+						<p>Websites mobile de companhias aéreas. A Sephora adequou o design ao contexto mobile.</p>
+						<p class="footnote special"><small>Fonte: <a href="http://www.smashingmagazine.com/2011/05/02/a-user-centered-approach-to-mobile-design/" target="_blank">A User Centered Approach to Mobile Design</a></small></p>
+					</section>
+					<section>
+						<img src="images/simplify-navigation-examples.jpg" alt="Navegação no site da American Airlines, CNN and Southwest">
+						<h4 class="special">American Airlines, CNN and Southwest</h4>
+						<p>Navegação simplificada e adequada para seleção na Southwest</p>
+						<p class="footnote special"><small>Fonte: <a href="http://www.smashingmagazine.com/2011/05/02/a-user-centered-approach-to-mobile-design/" target="_blank">A User Centered Approach to Mobile Design</a></small></p>
+					</section>
+					<section>
+						<img src="images/amazon1.jpg" alt="Website mobile da Amazon">
+						<h4>Amazon</h4>
+						<p>Website mobile da Amazon é sucinto no momento de apresentar informações</p>
+						<p class="footnote special"><small>Fonte: <a href="http://www.smashingmagazine.com/2011/05/02/a-user-centered-approach-to-mobile-design/" target="_blank">A User Centered Approach to Mobile Design</a></small></p>
+					</section>
+					<section>
+						<img src="images/shop2.gif" alt="Redução de informações em mobile">
+						<h4 class="special">Identificar as intenções de uso</h4>
+						<p>O seu website não precisa conter todas as funcionalidades na versão mobile</p>
+						<p class="footnote special"><small>Fonte: <a href="http://www.smashingmagazine.com/2011/07/18/seven-guidelines-for-designing-high-performance-mobile-user-experiences/" target="_blank">Seven Guidelines for Designing High Performance Mobile User Experiences</a></small></p>
+					</section>
+					<section>
+						<img src="images/minimize-input.jpg" alt="Minimização de input do usuário no site da Transit" height="350">
+						<h4>Transit: you’re doing it right</h4>
+						<p>Minimizar o uso de recursos que requerem digitação através de selectbox e outros controles. Além disso, a opção <em>"Use my current location"</em> permite que o usuário não tenha o esforço para digitar o endereço de sua localização atual.</p>
+						<p class="footnote special"><small>Fonte: <a href="http://www.smashingmagazine.com/2011/05/02/a-user-centered-approach-to-mobile-design/" target="_blank">A User Centered Approach to Mobile Design</a></small></p>
+					</section>
+					<section>
+						<a href="images/vwbig.jpg" target="_blank"><img src="images/vwbig.jpg" alt="Rolagem extensa de um form mobile do site da Volkswagen" height="450"></a>
+						<h4>Volkswagen: you’re doing it wrong</h4>
+						<p class="footnote special"><small>Fonte: <a href="http://www.smashingmagazine.com/2011/05/02/a-user-centered-approach-to-mobile-design/" target="_blank">A User Centered Approach to Mobile Design</a></small></p>
+					</section>
+				</section>
+				
+				<section data-state="sectionSlide highlight2">
+					<h1>Use Padrões!</h1>
+				</section>
+				
+				<section>
+					<h2>Padrões para touch screen</h2>
+					<section>
+						<img src="images/pattern1.png" alt="Mobile Patterns para User Interface">
+						<p class="footnote special"><small>Fonte: <a href="http://mobile-patterns.com" target="_blank">Mobile UI Patterns</a></small></p>
+					</section>
+					<section>
+						<img src="images/pattern2.png" alt="Mobile Patterns para User Interface">
+            <p class="footnote special"><small>Fonte: <a href="http://mobile-patterns.com" target="_blank">Mobile UI Patterns</a></small></p>
+					</section>
+					<section>
+						<img src="images/pattern3.png" alt="Mobile Patterns para User Interface">
+            <p class="footnote special"><small>Fonte: <a href="http://mobile-patterns.com" target="_blank">Mobile UI Patterns</a></small></p>
+					</section>
+					<section>
+						<img src="images/pattern4.png" alt="Mobile Patterns para User Interface">
+            <p class="footnote special"><small>Fonte: <a href="http://mobile-patterns.com" target="_blank">Mobile UI Patterns</a></small></p>
+					</section>
+				</section>
+				
+				<section data-state="sectionSlide highlight2">
+					<h1>Amarrando as ideias</h1>
+				</section>
+				
+				<section data-state="sectionSlide highlight3">
+					<h2>Três palavras</h2>
+					<h3 class="special">Simplicidade</h3>
+					<h3 class="special">Concisão</h3>
+					<h3 class="special">Esforço</h3>
+				</section>
+				
+				<section>
+					<h2>Referências</h2>
+					
+					<p class="footnote"><small>IBGE. Indicadores de Desenvolvimento Sustentável. Disponível em <a href="http://www.ibge.gov.br/home/geociencias/recursosnaturais/ids/ids2010.pdf" target="_blank">http://www.ibge.gov.br/home/geociencias/recursosnaturais/ids/ids2010.pdf</a>, 2010.</a></small></p>
+					<p class="footnote"><small>NIC.br. 5ª Pesquisa Sobre Uso das Tecnologias da Informação e da Comunicação no Brasil — TIC Domicílios 2009. Disponível em <a href="http://www.cetic.br/usuarios/tic/2009/analises.htm" target="_blank">http://www.cetic.br/usuarios/tic/2009/analises.htm</a>.</small></p>
+					<p class="footnote"><small>Pagani, T. 17 nov. 2011. “Navegabilidade em Dispositivos Móveis”. Disponível em: <a href="http://tableless.com.br/navegabilidade-em-dispositivos-moveis/" target="_blank">http://tableless.com.br/navegabilidade-em-dispositivos-moveis/</a></small></p>
+					<p class="footnote"><small>Android. The Developer’s Guide. Disponível em <a href="http://developer.android.com/guide/index.html" target="_blank">http://developer.android.com/guide/index.html</a>.</small></p>
+					<p class="footnote"><small>Apple. iOS Human Interface Guidelines. Disponível em <a href="http://developer.apple.com/library/ios/documentation/userexperience/conceptual/mobilehig/MobileHIG.pdf" target="_blank">http://developer.apple.com/library/ios/documentation/userexperience/conceptual/mobilehig/MobileHIG.pdf</a>.</small></p>
+					<p class="footnote"><small>Eis, D. Especificação para touch screens. 22 jun. 2011. Disponível em: <a href="http://tableless.com.br/especificacao-para-touch-screens/" target="_blank">http://tableless.com.br/especificacao-para-touch-screens/</a></small></p>
+					<p class="footnote"><small>Global Moxie. Responsive Web Design or Separate Mobile Site? Eh. It Depends. 26 Mar. 2011. Disponível em: <a href="http://globalmoxie.com/blog/mobile-web-responsive-design.shtml" target="_blank">http://globalmoxie.com/blog/mobile-web-responsive-design.shtml</a></small></p>
+					<p class="footnote"><small>Marcus, A. “Mobile User Interface Design: For Work, Home, and On the Way”. In ACM SIGCHI 2004. ACM, Viena, Austria, 2004.</small></p>
+				</section>
+				
+				<section data-state="sectionSlide highlight1">
+					<h1>Perguntas?</h1>
+				</section>
+				
+				<section>
+					<h1 class="special">Obrigada!</h1>
+					<h3 class="inverted">Talita Pagani</h3>
+					<h4 class="inverted">talita.cpb@gmail.com</h4>
+					<p><a href="http://twitter.com/talitapagani">@talitapagani</a></p>
+				</section>
+				
+			</div>
+
+			<!-- The navigational controls UI -->
+			<aside class="controls">
+				<a class="left" href="#">&#x25C4;</a>
+				<a class="right" href="#">&#x25BA;</a>
+				<a class="up" href="#">&#x25B2;</a>
+				<a class="down" href="#">&#x25BC;</a>
+			</aside>
+
+			<!-- Displays presentation progress, max value changes via JS to reflect # of slides -->
+			<div class="progress"><span></span></div>
+			
+		</div>
+
+		<!-- Optional libraries for code syntax highlighting and classList support in IE9 -->
+		<script src="lib/highlight.js"></script>
+		<script src="lib/classList.js"></script>
+		
+		<script src="js/reveal.js"></script>
+		
+		<script>
+			// Parse the query string into a key/value object
+			var query = {};
+			location.search.replace( /[A-Z0-9]+?=(\w*)/gi, function(a) {
+				query[ a.split( '=' ).shift() ] = a.split( '=' ).pop();
+			} );
+
+			// Fires each time a new slide is activated
+			Reveal.addEventListener( 'slidechanged', function( event ) {
+				// event.previousSlide, event.currentSlide, event.indexh, event.indexv
+			} );
+
+			Reveal.initialize({
+				// Display controls in the bottom right corner
+				controls: false,
+
+				// Display a presentation progress bar
+				progress: true,
+
+				// If true; each slide will be pushed to the browser history
+				history: true,
+
+				// Loops the presentation, defaults to false
+				loop: false,
+
+				// Flags if mouse wheel navigation should be enabled
+				mouseWheel: true,
+
+				// Apply a 3D roll to links on hover
+				rollingLinks: true,
+
+				// UI style
+				theme: query.theme || 'default', // default/neon
+
+				// Transition style
+				transition: query.transition || 'default' // default/cube/page/concave/linear(2d)
+			});
+
+			hljs.initHighlightingOnLoad();
+		</script>
+
+	</body>
+</html>
